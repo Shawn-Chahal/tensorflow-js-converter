@@ -4,6 +4,8 @@ import tensorflowjs as tfjs
 
 names = ["connect-four", "reversi"]
 
-for name in names:
-    model = tf.keras.models.load_model(os.path.join("tf-python", f"model_{ name }.h5"))
-    tfjs.converters.save_keras_model(model, os.path.join("tf-js", f"model_{ name }"))
+# IMPORTANT: Only convert one model in a single run of the script.
+name = names[1]
+
+model = tf.keras.models.load_model(os.path.join("tf-python", f"model_{ name }.h5"))
+tfjs.converters.save_keras_model(model, os.path.join("tf-js", f"model_{ name }"))
