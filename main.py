@@ -4,7 +4,7 @@ import tensorflowjs as tfjs
 
 
 # IMPORTANT: Only convert one model in a single run of the script.
-name = "gen_model_059"
+name = "model_natural-or-artificial"
 modify = 0
 
 model = tf.keras.models.load_model(os.path.join("tf-python", f"{ name }.h5"))
